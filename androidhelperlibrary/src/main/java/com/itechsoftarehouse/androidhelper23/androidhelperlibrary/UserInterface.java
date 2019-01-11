@@ -50,5 +50,9 @@ public class UserInterface {
         context.startActivity(i);
     }
 
+    public void doHello(){
+        this.toast("Hello World from Library");
+    }
+
 }
 
