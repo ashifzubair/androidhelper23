@@ -54,5 +54,7 @@ public class UserInterface {
         this.toast("Hello World from Library");
     }
 
+    public void doHellow2() { doHello(); };
+
 }
 
