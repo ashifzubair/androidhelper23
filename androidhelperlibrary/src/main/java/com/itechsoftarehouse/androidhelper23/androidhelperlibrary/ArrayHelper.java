@@ -38,8 +38,4 @@ public class ArrayHelper {
         frontValue.clear();
     }
 
-    public void aVoid(){
-
-    }
-
 }
