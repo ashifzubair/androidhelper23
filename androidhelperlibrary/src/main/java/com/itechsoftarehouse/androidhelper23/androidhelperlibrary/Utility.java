@@ -1,5 +1,7 @@
 package com.itechsoftarehouse.androidhelper23.androidhelperlibrary;
 
+import android.support.annotation.Nullable;
+
 public class Utility {
 
 
@@ -24,6 +26,28 @@ public class Utility {
     public boolean isempty(Double i) {
         String val = Double.toString(i);
         return isempty(val);
+    }
+
+    public boolean isnull(@Nullable String s){
+        if (s == null)
+            return true;
+        else
+            return false;
+    }
+
+    public boolean isnotnull(@Nullable String s){
+        return !isnull(s);
+    }
+
+    public boolean isnull(@Nullable Integer i){
+        if (i == null)
+            return true;
+        else
+            return false;
+    }
+
+    public boolean isnotnull(@Nullable Integer i){
+        return !isnull(i);
     }
 
     public boolean isnotempty(String str) {
@@ -83,6 +107,22 @@ public class Utility {
 
     public String upper(String str) {
         return str.toUpperCase();
+    }
+
+    public String nvl(String val1,String val2){
+        return isnotnull(val1)&&isnotempty(val1)?val1:val2;
+    }
+
+    public int nvl(int val1,int val2){
+        return isnotempty(val1)?val1:val2;
+    }
+
+    public float nvl(float val1,float val2){
+        return isnotempty(val1)?val1:val2;
+    }
+
+    public double nvl(double val1,double val2){
+        return isnotempty(val1)?val1:val2;
     }
 
 }
